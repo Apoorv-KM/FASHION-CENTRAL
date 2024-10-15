@@ -1,0 +1,687 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fashion Central</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/blade-runner-movie-font" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            *{
+            font-family: roboto,arial;
+            color: rgb(83, 86, 90);
+            }
+            body{
+                margin-left:0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+            .header1{
+                border-color: black;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                align-items: center;
+                border-bottom: 1px solid black;
+                height:20px;
+                font: roboto,arial;
+            }
+            .account{
+                flex:1; 
+                text-align: end;
+                vertical-align: bottom;
+                border-right: 1px solid black;
+                height: 100%;
+            }
+            .access{
+                text-align: center;
+                border-right: 1px solid black;
+                height: 100%;
+            }
+            .help{
+                text-align: center;
+                border-right: 1px solid black;
+                height: 100%;
+            }
+            .email{
+                text-align: center;
+                border-right: 1px solid black;
+                height: 100%;
+            }
+            .blog{ 
+                text-align: center;
+                border-right: 1px solid black;
+                height: 100%;
+            }
+            .ROW{
+                text-align: center;
+                height: 100%;
+            }
+            .ROW:hover{
+                font-weight: 900;
+                color: black;
+            }
+            .hover{
+                text-decoration: none;
+                color: rgb(83, 86, 90);
+                font-size: 15px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .hover:hover{
+                color: black;
+                font-weight: 900;
+            }
+            .person_icon{
+                height: 16px;   
+                vertical-align: bottom;
+            }
+            .account .hover{
+            padding-left: 0px;
+            }
+            .row button{
+                color: rgb(83, 86, 90);
+                font-size: 15px ;
+                border-bottom: 0px;
+                border-left: 0px;
+                border-right: 0px;
+                border-top: 0px;
+                background-color: white;
+                padding: 10px 15px;
+                cursor: pointer;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                border-style: solid;
+            }
+            .row a{
+                display: block;
+                color: rgb(83, 86, 90);
+                text-decoration: none;
+                padding: 10px 15px;
+                box-shadow: 2px 2px 5px rgba(0 0 0 0.3);
+                border: 1px black solid;
+                text-align: center;
+            }
+            .row .content{
+                display: none;
+                position: absolute;
+                min-width: 100px;
+            }
+            .row:hover .content{
+                display: block;
+                border: 1px solid black;
+                background-color: white;
+                transition: background-color 0.25s;
+            }
+            .row a:hover{
+                text-decoration: underline;
+                transition: text-decoration 0.15s;
+            }
+            .header2{
+                display: flex;
+                flex-direction: row;
+            }
+            .name{
+                font-size: 30px;
+                font-style: italic;
+                font-weight: 600;
+                font-family: poppins,roboto; 
+                text-decoration: none;   
+                color: rgb(37, 42, 48);
+                margin-bottom: 100px;
+
+            }
+            .logo_element{
+                margin-left: 10px;
+                width: 600;
+            }
+            .logo_element p{
+                font-size: 60px;
+                font-weight: 600;
+                font-family: poppins,roboto; 
+                text-decoration: none;   
+                color: rgb(37, 42, 48);
+                margin-top: 0px;
+                margin-bottom: 0px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            .gender{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 750px;
+            }
+            .input{
+                flex: 1;  
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            .man{
+                padding: 10px 10px 10px 10px;
+                margin-right: 30px;
+                margin-left: 30px;
+                font-size: 20px;
+            }
+            .man:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .textbox{
+                width: 200px;
+                height: 30px;
+                border-radius: 5px;
+            }
+            .emoji{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                text-align: left;
+            }
+            .emoji:hover{
+                cursor:pointer;
+            }
+            .search{
+                margin-right: 10px;
+            }
+            .black_line{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: center;
+                font-size: 13px;
+                background-color: black;
+                margin-bottom: 15px;
+            }
+            .a{
+                color: whitesmoke;
+            }
+            .red_model{
+                height: 750px;
+                background: url(model\ dress\ 1.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .model_text{
+                position: absolute;
+                left: 5%;
+                top: 60%;
+                width: 600px;
+            }
+            .new_arrivals{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+                margin-left: 0px;
+                height: 80px;
+            }
+            .new-arrivals{
+                padding: 5px 10px 5px 10px;
+                font-size: 40px;
+                color: rgb(224, 225, 225);
+                background-color: rgb(166,151,144);
+                font-style: italic;
+                font-weight: 600;
+                font-family: Montserrat;
+                text-align: center;
+                height: 60;
+                margin-bottom: 0px;
+            }
+            .clothes{
+                display: flex;
+                flex-direction: row;
+                background-color: whitesmoke; 
+                justify-content: space-between; 
+                margin-bottom: 55px;   
+            }
+            .cloth1{
+                width: 300px;
+                display: inline-block;
+                box-shadow: 5px 8px 20px rgba(0,0,0,0.6);
+                padding-left: 15px;
+                padding-right: 15px;
+                background-color: white;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border-radius: 20px;
+                margin-left: 15px;
+                margin-right: 15px;
+                text-align: center;
+            }
+            .pic1{
+                width: 300px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+            .shop_women{
+                margin-top: 0px; 
+                height: 50px;
+                width: 160px; 
+                margin-right: 10px;
+                border-radius: 25px;
+                border-style: solid;
+            }
+            .shop_men{
+                margin-top: 0px; 
+                height: 50px;
+                width: 140px;
+                border-radius: 25px;
+                border-style: solid;
+            }
+            .shop_women:hover{
+                background-color: rosybrown;
+                color: black;
+                cursor: pointer;
+                transition: background-color 0.25s;
+                transition: color 0.25s;
+            }
+            .shop_men:hover{
+                background-color: gray;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.25s;
+                transition: color 0.25s;
+            }
+            .item{
+                font-size: 25px;
+                padding: 5px 10px 5px 10px;
+            }
+            .item:hover{
+                text-decoration: underline;
+                font-size: 28px;
+                cursor: pointer;
+                transition: font-size 0.25s;
+            }
+            .color{
+                margin-top: 6px;
+                margin-bottom: 8px;
+                font-size: 15px;
+                color: rgb(243, 196, 126);
+            }
+            .price{
+                margin-top: 10px;
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: gray;
+            }
+            .desc{
+                margin-top: 15px;
+            }
+            .sale{
+                height: 750px;
+                background: url(lady1.jpg);
+                background-size: cover;
+            }
+            .sale_text{
+                position: relative;
+                left: 64%;
+                top: 24.5%;
+                width: 450px;
+            }
+            .buy_now{
+                height: 60px;
+                width: 200px;
+                border-radius: 15px;
+                border-style: solid;
+                font-size: 30px;
+                font-family: 'Blade Runner Movie Font', sans-serif;
+                background-color: rgb(166, 151, 144);
+                color: black;
+            }
+            .buy_now:hover{
+                cursor: pointer;
+                background-color: rosybrown;
+                color: white;
+                transition: background-color 0.25s;
+                transition: color 0.25s;
+            }
+            .brands{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                background-color: rgb(166, 151, 144);
+                margin-top: 45px;
+                height: 120px;
+                column-width: 20px;
+                align-items: center;    
+                margin-bottom: 45px;
+            }
+            .brand_1{
+                height: 100px;
+            }
+            .theres_more{
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+            }
+            .buttons{
+                margin-left: 21px;
+            }
+            .button_1{
+                background-color: black;
+                color: rgb(225,225,225);
+                font-family: Montserrat;
+                font-size: 13px;
+                height: 39.6px;
+                font-weight: 700;
+                border-radius: 19.8px;
+                text-align: center;
+                padding-bottom: 12px;
+                padding-inline-end: 16px;
+                padding-inline-start: 16px;
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 12px;
+                padding-block-end: 12px;
+                padding-block-start: 12px;
+                border: none;
+                cursor: pointer;
+            }
+            .button_2{
+                background-color: rgb(225,225,225);
+                color: black ;
+                font-family: Montserrat;
+                font-size: 13px;
+                height: 39.6px;
+                font-weight: 700;
+                border-radius: 19.8px;
+                text-align: center;
+                padding-bottom: 12px;
+                padding-inline-end: 16px;
+                padding-inline-start: 16px;
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 12px;
+                padding-block-end: 12px;
+                padding-block-start: 12px;
+                border: none;
+                cursor: pointer;
+            }
+            .button_2:hover{
+                background-color: black;
+                color: rgb(225,225,225);
+                transition: background-color 0.25s;
+                transition: color 0.25s ;
+            }
+            .social_display{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: start;
+                margin-top: 40px;
+            }
+            .pamplet{
+                width: 350px;
+                margin-bottom: 10px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+            }
+            .pamplet_img{
+                width: 350px;
+            }
+            .img1{
+                width: 350px;
+                object-fit: cover;
+            }
+            .info a:hover{
+                font-size: 22px;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .page-end{
+                background-color: rgb(234, 234, 234);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-bottom: 0px;
+                margin-top: 40px;
+            }
+            .sitemap{
+                display: flex;
+                flex-direction: column;
+            }
+            .sitemap-in{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .information p{
+                color: rgb(26, 26, 26);
+                font-size: 13px;
+                font-weight: 400;
+                opacity: 0.7;
+            }
+            .information p:hover{
+                cursor: pointer;
+                text-decoration: underline;
+                font-size: 15px;
+                transition: underline 0.25s;
+            }
+            .newsletter{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .newsletter button:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .socials{
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(234, 234, 234);
+                margin-top: 0px;
+            }
+            .socials_icons{
+                display: flex;
+                flex-direction: row;
+                margin-left: 95px;
+                justify-content: start;
+                align-items: center;
+            }
+            .insta{
+                padding-top: 40px;
+                margin-right: 40px;
+            }
+            .insta:hover{
+                cursor: pointer;
+            }
+            .public:hover{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+    <!Header!>  
+        <div class="header1">
+            <div class="account">
+                <img class="person_icon" src="person icon.png"><a class="hover" href="" style="padding-right: 5px;">Account</a>
+            </div>
+            <div class="access"><a class="hover" href="">Accessibility Statement</a></div>
+            <div class="help"><a class="hover" href="">Help</a></div>
+            <div class="email"><a class="hover" href="">Email Sign up</a></div>
+            <div class="blog"><a class="hover" href="">Blog</a></div>
+            <div class="row">
+                <button class="ROW">Country▼</button>
+                <div class="content">
+                    <a href="">India</a>
+                    <a href="">US</a>
+                    <a href="">UK</a>
+                </div>
+            </div>
+        </div>
+        <div class="header2">
+            <div class="logo_element"><p>ℛ</p> <a class="name" href="">REGALIA</a></div>
+            <div class="gender">
+                <a class="man">WOMEN'S</a>
+                <a class="man">MEN'S</a>
+                <a class="man">ACCESSORIES</a>
+            </div>
+            <div class="input">
+                <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div><input class="textbox" type="text" placeholder="What are you looking for?"></div>
+                <div class="emoji">
+                    <div><i class="fa-solid fa-heart"></i></div>
+                    <div><i class="fa-solid fa-user"></i></div>
+                    <div><i class="fa-brands fa-shopify"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="black_line">
+            <div><p class="a">&#x2022; EXPRESS INTERNATIONAL SHIPPING &#x2022;</p></div>
+            <div><p class="a">&#x2022; FREE INDIA SHIPPING ON ORDERS OVER &#8377;3000 &#x2022;</p></div>
+            <div><p class="a">&#x2022; HIGH QUALITY PRODUCTS &#x2022;</p></div>
+        </div>
+        <div class="red_model">
+            <div class="model_text ">
+                <h1 style="font-size: 50px; margin-bottom: 0px;font-weight: bold; color: beige; font-family: 'Lucida Sans';">HOT STUFF JUST DROPPED!!<h1>
+                <h2 style="font-weight: bold; margin-top: 5px; font-size: 35px;margin-bottom: 0px;">Grab a New Fit. EASY.<h2>
+                <div>
+                    <button class="shop_women"><a style="text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">SHOP WOMEN</a></button> 
+                    <button class="shop_men"><a style="text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">SHOP MEN</a></button>
+                </div>
+            </div>       
+        </div>
+        <div class="new_arrivals">
+            <div><p class="new-arrivals">NEW ARRIVALS</p></div>
+        </div>
+        <div class="clothes">
+            <div class="cloth1">
+                <img class="pic1" src="cloth1.webp">
+                <div class="desc">
+                    <a class="item">SCRIPT T-SHIRT</a>
+                    <p class="color">Off White</p>
+                    <p class="price">Rs. 3,400.00</p>
+                </div>
+                
+            </div>
+            <div class="cloth1">
+                <img class="pic1" src="cloth2.webp">
+                <div class="desc">
+                    <a class="item">CARGO TROUSERS</a>
+                    <p class="color">Black</p>
+                    <p class="price">Rs. 5600.00</p>
+                </div>
+            </div>
+            <div class="cloth1">
+                <img class="pic1" src="CLOTH3.webp">
+                <div class="desc">
+                    <a class="item">CARGO SHORTS</a>
+                    <p class="color">Phantom Grey</p>
+                    <p class="price">Rs. 4,200.00</p>
+                </div>
+            </div>
+            <div class="cloth1">
+                <img class="pic1" src="cloth4.webp">
+                <div class="desc">
+                    <a class="item">INITIAL BOX ZIP HOODIE</a>
+                    <p class="color">Black</p>
+                    <p class="price">Rs. 6,800.00</p>
+                </div>
+            </div>      
+        </div>
+        <div class="sale">
+            <div class="sale_text">
+                <h1 style="font-size: 60px; margin-bottom: 0px;font-weight: bold; color: beige; font-family: 'Blade Runner Movie Font', sans-serif;">BANG-tober SalE<h1>
+                <h2 style="font-weight: bold; margin-top: 5px; font-size: 35px;margin-bottom: 0px; color: rgb(0, 0, 0);font-family: 'Blade Runner Movie Font', sans-serif;">Over 30% off on Choice Brands<h2>
+                <button class="buy_now">BUY NOW</button>   
+            </div>
+        </div>
+        <div class="brands">
+            <div><img class="brand_1" src="Gucci-Logo.png"></div>
+            <div><img class="brand_1" src="Dior-Logo.png"></div>
+            <div><img class="brand_1" src="adidas logo.svg"></div>
+            <div><img class="brand_1" src="Zara_Logo.svg.png"></div>
+            <div><img class="brand_1" src="under armour.png"></div>
+            <div><img class="brand_1" src="PUMA-Logo-1978-1980.png"></div>
+        </div>
+        <div class="theres_more">
+            <div><p style="font-family: montserrat; font-size: 35px; color: black; padding: 10px 15px 10px 15px; font-weight: 500; margin-bottom: 15px;">WAIT THERE'S MORE...</p></div>
+            <div class="buttons">
+                <button class="button_1">TRENDING</button>
+                <button class="button_2">STYLING</button>
+                <button class="button_2">APPS</button>
+            </div>
+        </div>
+        <div class="social_display">
+            <div class="pamplet">
+                <div class="pamplet_img"><img class="img1" src="img1.avif"></div>
+                <div class="info">
+                    <a style="font-family: Montserrat;color: black;font-size: 20px;font-weight: 700; font-size: 20px;margin-left: 5px;" href="">WHAT'S HOT?</a>
+                    <P style="font-family: Montserrat; color: rgb(68,68,68);font-size: 16px;margin-left: 5px;">Everything you need to know about the best outfits in the game, from t-shirts, to pants, to hoodies</P>
+                </div>
+            </div>
+            <div class="pamplet">
+                <div class="pamplet_img"><img class="img1" src="img2.avif"></div>
+                <div class="info">
+                    <a style="font-family: Montserrat;color: black;font-size: 20px;font-weight: 700; font-size: 20px;margin-left: 5px;" href="">SOCIAL MEDIA FRENZY</a>
+                    <P style="font-family: Montserrat; color: rgb(68,68,68); font-size: 16px;margin-left: 5px;">Trendy outfits that are ruling the media circle&#44; from Instagram to YouTube; just for you!</P>
+                </div>
+            </div>
+        </div>
+        <div class="page-end">
+            <div class="sitemap">
+                <div><p style="color: rgb(26, 26, 26);font-weight: 700; font-size: 13px;margin-bottom: 20px;">SITEMAP</p></div>
+                <div class="sitemap-in">
+                    <div class="information"><p>NEW</p></div>
+                    <div class="information"><p>COLLECTIONS</p></div>
+                    <div class="information"><p>CLOTHING</p></div>
+                    <div class="information"><p>ACCESSORIES</p></div>
+                    <div class="information"><p>GIFT CARDS</p></div>
+                </div>
+            </div>
+            <div class="sitemap">
+                <div><p style="color: rgb(26, 26, 26);font-weight: 700; font-size: 13px;margin-bottom: 20px;">SUPPORT</p></div>
+                <div class="sitemap-in">
+                    <div class="information"><p>RETURNS</p></div>
+                    <div class="information"><p>FAQ'S</p></div>
+                    <div class="information"><p>ABOUT US</p></div>
+                    <div class="information"><p>REPORT A FAKE</p></div>
+                    <div class="information"><p>CONTACT US</p></div>
+                </div>
+            </div>
+            <div class="sitemap">
+                <div><p style="color: rgb(26, 26, 26);font-weight: 700; font-size: 13px;margin-bottom: 20px;">DOWNLOAD APP</p></div>
+                <div class="sitemap-in">
+                    <div class="information"><i class="fa-brands fa-apple"></i> <p style="display: inline-block;">IOS</p></div>
+                    <div class="information"><i class="fa-brands fa-android"></i> <p style="display: inline-block;">ANDROID</p></div>
+                </div>
+            </div>
+            <div class="newsletter">
+                <div><P style="margin: 0px; color: rgb(26, 26, 26);font-size: 32px;font-weight: 700;">BE THE FIRST TO KNOW</P></div>
+                <div><P style="margin: 0px; color: rgb(26, 26, 26);font-size: 13px;font-weight: 400;">Sign up to our newspaper for 10% off on your next order!</P></div>
+                <div><input style="height: 20px; width: 200px; "text" placeholder="Email"></div>
+                <div><input style="height: 20px; width: 200px;" type="text" placeholder="First Name"></div>
+                <div><input style="height: 20px; width: 200px;"type="text" placeholder="Last Name"></div>
+                <div><button style="background-color: black;color: white;font-size: 13px;height: 42px;width: 100px; border-radius: 21px;">Subscribe</button></div>
+            </div>
+        </div>
+        <div class="socials">
+            <div class="socials_icons">
+                <div class="insta"><i class="fa-brands fa-facebook"></i></div>
+                <div class="insta"><i class="fa-brands fa-twitter"></i></div>
+                <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+                <div class="insta"><i class="fa-brands fa-discord"></i></div>
+                <div class="insta"><i class="fa-brands fa-youtube"></i></div>
+                <div class="insta"><i class="fa-brands fa-tiktok"></i></div>
+            </div>
+            <div style="margin-left: 95px;">
+                <p class="public" style="margin-bottom: 0px;"><span style="font-size: 12px;color: rgb(26, 26, 26); text-decoration: underline;">Terms & Conditions</span> | <span style="font-size: 12px;color: rgb(26, 26, 26);text-decoration: underline;">Privacy Policy</span></p>
+            </div>
+            <div style="margin-left: 95px; margin-top: 0px;">
+                <p class="public" style="margin-top: 0px;font-size: 12px;color: rgb(26, 26, 26);"><i class="fa-regular fa-copyright"></i>2024, Regalia Clothing</p>
+            </div>
+        </div>
+    </body>
+    </html>
